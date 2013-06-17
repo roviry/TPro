@@ -6,11 +6,15 @@ describe "StaticPages" do
         before { visit '/static_pages/home' }
 
         it "should have the <h1> tag 'Home'" do
-            page.should have_selector('h1', :text => 'Home')
+            page.should have_selector('h1', :text => 'TennisPro')
         end
 
         it "should have the title 'Home'" do
-            page.should have_selector('title', :text => 'Home')
+            page.should have_selector('title', :text => 'TennisPro')
+        end
+
+        it "should not have a custom title" do
+            page.should_not have_selector('title', :text => 'Home')
         end
     end
 
