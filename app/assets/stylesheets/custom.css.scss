@@ -1,5 +1,15 @@
 @import "bootstrap";
 
+/* Mixins, variables, etc. */
+
+$grayMediumLight: #eaeaea;
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 /* UNIVERSAL CSS ELEMENTS */
 
 html {
@@ -7,6 +17,7 @@ html {
 }
 
 body {
+	font-size: 90%;
 	padding-top: 70px;
 }
 
@@ -31,7 +42,12 @@ h1, h2, h3, h4, h5, h5 {
 	line-height: 1;
 }
 
+.tpro {
+	color: #006600;
+}
+
 h1 {
+	color: #006600;
 	font-size: 3em;
 	letter-spacing: -2px;
 	margin-bottom: 30px;
@@ -44,11 +60,12 @@ h2 {
 	margin-bottom: 30px;
 	text-align: center;
 	font-weight: normal;
-	color: #999;
+	color: #707070;
 }
 
 p {
-	font-size: 1.1em;
+	color: #707070;
+	font-size: 1em;
 	line-height: 1.7em;
 }
 
@@ -58,7 +75,7 @@ p {
 	float: left;
 	margin-right: 10px;
 	font-size: 1.7em;
-	color: #006633;
+	color: #006600;
 /*  text-transform: uppercase; */
 	letter-spacing: -1px;
 	padding-top: 9px;
@@ -74,12 +91,12 @@ p {
 footer {
 	margin-top: 45px;
 	padding-top: 5px;
-	border-top: 1px solid #006633;
-	color: #999;
+	border-top: 1px solid #006600;
+	color: #707070;
 	a {
 		color: #555;
 		&:hover { 
-  			color: #006633;
+  			color: #006600;
 		}
 	}
 	small {
@@ -93,4 +110,14 @@ footer {
 			margin-left: 20px;
 		}
 	}
+}
+
+/* Miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
 }

@@ -1,4 +1,15 @@
 Tennispro::Application.routes.draw do
+
+#    get "users/show"
+#    get "users/new"
+#    get "users/create"
+#    get "users/update"
+#    get "users/edit"
+#    get "users/index"
+#    get "users/destroy"
+
+    resources :users
+
     root to: 'static_pages#home'
 
     match '/help', to: 'static_pages#help'

@@ -1,0 +1,10 @@
+<% provide(:title, @user.name) %>
+<h1><%= @user.name %></h1>
+<ul>
+	<li>Name: <%= @user.name %></li>
+	<li>email: <%= @user.email %></li>
+	<li>Admin: <%= @user.admin %></li>
+	<li>Coach: <%= @user.coach %></li>
+	<li>Password Hash: <%= @user.password_digest %></li>
+	<li>Created: <%= time_ago_in_words(@user.created_at) %></li>
+</ul>
